@@ -1,0 +1,12 @@
+.listItem {
+    background-color: aquamarine;
+    border: 2px solid black;
+    margin-bottom:1%;
+     font-size:16;
+}
+
+.ulStyles{
+    list-style: none;
+    display: inline-table;;
+    width: 600px;
+}

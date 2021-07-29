@@ -26,7 +26,7 @@ mutation deleteBookmark($id:ID!){
 `;
 
 export default function Home() {
-  const { loading, error, data } = useQuery(BookMarksQuery);
+  const { loading, data } = useQuery(BookMarksQuery);
   const [addBookmark] = useMutation(AddBookMarkMutation);
   const [deleteBookmark] = useMutation(DeleteBookmark);
   let textfield;
@@ -39,6 +39,9 @@ export default function Home() {
       },
       refetchQueries: [{ query: BookMarksQuery }],
     })
+  }
+  if(loading){
+    return(<h1>Loading...</h1>)
   }
   if ((data !== undefined) && (data.bookmark.length !== 0)) {
     return (

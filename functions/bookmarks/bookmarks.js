@@ -19,9 +19,7 @@ const typeDefs = gql`
     deleteBookmark(id:ID!):String
   }
 `
-let indexName;
-let lenCount;
-let deleteFromNewIndex = false;
+
 const resolvers = {
   Query: {
     bookmark: async (root, args, context) => {
